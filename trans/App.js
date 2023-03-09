@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import InputTextBox from './src/screens/InputTextBox';
 import LanguageSelection from './src/screens/LanguageSelection';
 // Custom Components
 import Navbar from './src/screens/Navbar';
@@ -9,6 +10,7 @@ export default function App() {
     <View>
       <Navbar />
       <LanguageSelection />
+      <InputTextBox />
     </View>
   );
 }
