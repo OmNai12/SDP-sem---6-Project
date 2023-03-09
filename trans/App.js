@@ -4,6 +4,7 @@ import InputTextBox from './src/screens/InputTextBox';
 import LanguageSelection from './src/screens/LanguageSelection';
 // Custom Components
 import Navbar from './src/screens/Navbar';
+import OutputTextBox from './src/screens/OutputTextBox';
 
 export default function App() {
   return (

@@ -1,11 +1,13 @@
 import { View, Image, TextInput, StyleSheet, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import OutputTextBox from './OutputTextBox'
 
 const InputTextBox = () => {
+    const [inputTextField, setInputTextField] = useState("")
     return (
         <View>
             <View style={styles.container}>
-                <TextInput placeholder={'Enter the text...'} style={styles.inputTextBoxStyle}>
+                <TextInput onChangeText={(text) => setInputTextField(text)} placeholder={'Enter the text...'} style={styles.inputTextBoxStyle}>
                 </TextInput>
             </View>
             <View style={styles.buttonCard}>
@@ -13,10 +15,12 @@ const InputTextBox = () => {
                     <Image resizeMode='contain' style={styles.imageStyle} source={require('../../assets/camraIcon.png')} />
                 </TouchableOpacity>
                 {/* For Normal Translation */}
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity onPress={() => {
+                }} style={styles.buttonStyle}>
                     <Text style={styles.textStyle}>Translate</Text>
                 </TouchableOpacity>
             </View>
+            <OutputTextBox transText={inputTextField} />
         </View>
     )
 }
